@@ -1,5 +1,11 @@
-function App() {
-  return <h2>Hola mundo!</h2>;
-}
+import Login from "./components/Login";
+
+const App = () => {
+  return (
+    <div>
+      <Login />
+    </div>
+  );
+};
 
 export default App;
