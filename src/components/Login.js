@@ -1,7 +1,10 @@
 import axios from "axios";
 import swAlert from "@sweetalert/with-react";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
+  const history = useHistory();
+
   const submitHandler = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
@@ -31,6 +34,7 @@ const Login = () => {
         swAlert(<h2>Ingresaste correctamente</h2>);
         const token = response.data.token;
         localStorage.setItem("token", token);
+        history.push("/list");
       });
   };
 
