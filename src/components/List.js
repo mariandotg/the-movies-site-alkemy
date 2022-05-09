@@ -5,7 +5,7 @@ const List = () => {
   const history = useHistory();
 
   useEffect(() => {
-    const token = localStorage.get("token");
+    const token = localStorage.getItem("token");
     if (token === null) {
       history.push("/");
     }
