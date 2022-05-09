@@ -1,13 +1,17 @@
 import { Switch, Route } from "react-router-dom";
 import Login from "./components/Login";
 import List from "./components/List";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <Switch>
-      <Route exact path="/" component={Login} />
-      <Route path="/list" component={List} />
-    </Switch>
+    <>
+      <Switch>
+        <Route exact path="/" component={Login} />
+        <Route path="/list" component={List} />
+      </Switch>
+      <Footer />
+    </>
   );
 };
 
